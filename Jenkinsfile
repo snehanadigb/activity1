@@ -17,16 +17,11 @@ pipeline{
               
             }
         }
-        stage('Test')
-        {
-            steps{
-                bat 'node Test.js'
-            }
-        }
+        
         stage('Deploy')
         {
             steps{
-                bat 'node Item.js'
+                bat 'node linked_list.js'
             }
         }
     }
