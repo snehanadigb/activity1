@@ -4,6 +4,11 @@ pipeline{
         githubPush()
         }
     stages{
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/snehanadigb/activity1.git'
+            }
+        }
         stage('Clone'){
             steps{
                 git 'https://github.com/snehanadigb/activity1.git'
